@@ -40,7 +40,8 @@ export default function MyTickets() {
           <p className="card-desc">{tickets.length} ticket{tickets.length !== 1 ? 's' : ''} in your wallet</p>
         </div>
       </div>
-      <div className="badge-grid">
+
+      <div className="ticket-grid">
         {tickets.map((obj) => {
           const content = obj.data?.content
           if (content?.dataType !== 'moveObject') return null
@@ -53,15 +54,28 @@ export default function MyTickets() {
               href={objectUrl(objId)}
               target="_blank"
               rel="noreferrer"
-              className="badge-card"
-              style={{ textDecoration: 'none', color: 'inherit' }}
+              className="ticket-card"
             >
-              <div className="badge-icon">{f.used ? '✅' : '🎟️'}</div>
-              <div className="badge-name">{f.event_name}</div>
-              <div className="badge-desc">📅 {f.event_date}</div>
-              <div className="badge-desc">💺 Seat: {f.seat}</div>
-              <div className="badge-desc" style={{ marginTop: '4px', fontSize: '0.7rem', opacity: 0.6 }}>
-                {f.used ? 'Used' : 'Valid'} · Issued by {f.issuer.slice(0, 8)}...
+              <div className="ticket-top">
+                <div className="ticket-emoji">{f.used ? '✅' : '🎟️'}</div>
+                <div className="ticket-info">
+                  <div className="ticket-event-name">{f.event_name}</div>
+                  <div className="ticket-date">📅 {f.event_date}</div>
+                  <div className="ticket-seat">💺 {f.seat}</div>
+                </div>
+              </div>
+
+              <div className="ticket-divider">
+                <div className="ticket-hole" />
+              </div>
+
+              <div className="ticket-bottom">
+                <div className="ticket-issuer">
+                  Issued by {f.issuer.slice(0, 6)}...{f.issuer.slice(-4)}
+                </div>
+                <div className={`ticket-status ${f.used ? 'used' : 'valid'}`}>
+                  {f.used ? '✓ Used' : '● Valid'}
+                </div>
               </div>
             </a>
           )
