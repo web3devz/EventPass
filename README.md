@@ -12,7 +12,7 @@ A decentralized ticketing system built on **OneChain**. Each ticket is a unique 
 | Deploy Transaction | `DpuugYARoxXXFK2MKgmrELQWQkCxkdXfgBwLuGrwWpUt` |
 
 - [View Package](https://onescan.cc/testnet/objectDetails?address=0x373edb82cdfd49e316ed4cc5f224ed61cd2f7d49c9bc4737cba63e0a80ab4eee)
-- [View Deploy Tx](https://onescan.cc/testnet/transactionDetail?digest=DpuugYARoxXXFK2MKgmrELQWQkCxkdXfgBwLuGrwWpUt)
+- [View Deploy Tx](https://onescan.cc/testnet/transactionBlocksDetail?digest=DpuugYARoxXXFK2MKgmrELQWQkCxkdXfgBwLuGrwWpUt)
 
 ---
 
