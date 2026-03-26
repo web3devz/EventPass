@@ -1,5 +1,5 @@
 import { useCurrentAccount, useSuiClientQuery } from '@mysten/dapp-kit'
-import { PACKAGE_ID, objectUrl } from '../config/network'
+import { PACKAGE_ID } from '../config/network'
 
 interface TicketFields {
   event_name: string
@@ -49,11 +49,8 @@ export default function MyTickets() {
           const objId = obj.data?.objectId ?? ''
 
           return (
-            <a
+            <div
               key={objId}
-              href={objectUrl(objId)}
-              target="_blank"
-              rel="noreferrer"
               className="ticket-card"
             >
               <div className="ticket-top">
@@ -77,7 +74,7 @@ export default function MyTickets() {
                   {f.used ? '✓ Used' : '● Valid'}
                 </div>
               </div>
-            </a>
+            </div>
           )
         })}
       </div>
