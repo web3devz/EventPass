@@ -1,4 +1,4 @@
-# EventPass
+# EventPass 🎫
 
 A decentralized ticketing system built on **OneChain**. Each ticket is a unique NFT linked to a wallet — authentic, non-duplicable, and verifiable. Supports secondary trading, collectibles, and post-event engagement.
 
@@ -13,6 +13,14 @@ A decentralized ticketing system built on **OneChain**. Each ticket is a unique 
 
 - [View Package](https://onescan.cc/testnet/packageDetail?packageId=0x373edb82cdfd49e316ed4cc5f224ed61cd2f7d49c9bc4737cba63e0a80ab4eee)
 - [View Deploy Tx](https://onescan.cc/testnet/transactionBlocksDetail?digest=DpuugYARoxXXFK2MKgmrELQWQkCxkdXfgBwLuGrwWpUt)
+
+---
+
+## Features
+
+- Issue NFT tickets to any recipient wallet
+- View all tickets owned by connected wallet with event details, seat, and validity status
+- **AI Event Description** — type event details and click "✨ Rewrite" to get GPT-4o-mini to polish the event description into premium, engaging copy
 
 ---
 
@@ -42,6 +50,7 @@ cd frontend && npm install && npm run dev
 Set in `frontend/.env`:
 ```env
 VITE_PACKAGE_ID=<package_id>
+VITE_OPENAI_KEY=<openai_api_key>
 ```
 
 ## License
